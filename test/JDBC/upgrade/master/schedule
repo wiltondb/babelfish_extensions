@@ -48,7 +48,6 @@ BABEL-3121
 sys-events
 sys-suser_sid
 sys-trigger_events
-restricted_procedures
 BABEL-2688
 BABEL-328
 BABEL-3166
@@ -92,7 +91,6 @@ sys-trigger_nestlevel
 schema_resolution_proc
 BABEL-404
 BABEL-493
-BABEL-621-after-14_12-before-15
 BABEL-775
 BABEL-1206
 BABEL-1243
