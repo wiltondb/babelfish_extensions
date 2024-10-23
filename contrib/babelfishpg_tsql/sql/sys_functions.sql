@@ -4542,3 +4542,314 @@ CREATE OR REPLACE AGGREGATE sys.string_agg(sys.NVARCHAR, sys.VARCHAR) (
     STYPE = INTERNAL,
     PARALLEL = SAFE
 );
+
+-- https://github.com/wiltondb/wiltondb/issues/77
+CREATE OR REPLACE FUNCTION sys.concat(
+    s1 sys.NVARCHAR DEFAULT '',
+    s2 sys.NVARCHAR DEFAULT '',
+    s3 sys.NVARCHAR DEFAULT '',
+    s4 sys.NVARCHAR DEFAULT '',
+    s5 sys.NVARCHAR DEFAULT '',
+    s6 sys.NVARCHAR DEFAULT '',
+    s7 sys.NVARCHAR DEFAULT '',
+    s8 sys.NVARCHAR DEFAULT '',
+    s9 sys.NVARCHAR DEFAULT '',
+    s10 sys.NVARCHAR DEFAULT '',
+    s11 sys.NVARCHAR DEFAULT '',
+    s12 sys.NVARCHAR DEFAULT '',
+    s13 sys.NVARCHAR DEFAULT '',
+    s14 sys.NVARCHAR DEFAULT '',
+    s15 sys.NVARCHAR DEFAULT '',
+    s16 sys.NVARCHAR DEFAULT '',
+    s17 sys.NVARCHAR DEFAULT '',
+    s18 sys.NVARCHAR DEFAULT '',
+    s19 sys.NVARCHAR DEFAULT '',
+    s20 sys.NVARCHAR DEFAULT '',
+    s21 sys.NVARCHAR DEFAULT '',
+    s22 sys.NVARCHAR DEFAULT '',
+    s23 sys.NVARCHAR DEFAULT '',
+    s24 sys.NVARCHAR DEFAULT '',
+    s25 sys.NVARCHAR DEFAULT '',
+    s26 sys.NVARCHAR DEFAULT '',
+    s27 sys.NVARCHAR DEFAULT '',
+    s28 sys.NVARCHAR DEFAULT '',
+    s29 sys.NVARCHAR DEFAULT '',
+    s30 sys.NVARCHAR DEFAULT '',
+    s31 sys.NVARCHAR DEFAULT '',
+    s32 sys.NVARCHAR DEFAULT '',
+    s33 sys.NVARCHAR DEFAULT '',
+    s34 sys.NVARCHAR DEFAULT '',
+    s35 sys.NVARCHAR DEFAULT '',
+    s36 sys.NVARCHAR DEFAULT '',
+    s37 sys.NVARCHAR DEFAULT '',
+    s38 sys.NVARCHAR DEFAULT '',
+    s39 sys.NVARCHAR DEFAULT '',
+    s40 sys.NVARCHAR DEFAULT '',
+    s41 sys.NVARCHAR DEFAULT '',
+    s42 sys.NVARCHAR DEFAULT '',
+    s43 sys.NVARCHAR DEFAULT '',
+    s44 sys.NVARCHAR DEFAULT '',
+    s45 sys.NVARCHAR DEFAULT '',
+    s46 sys.NVARCHAR DEFAULT '',
+    s47 sys.NVARCHAR DEFAULT '',
+    s48 sys.NVARCHAR DEFAULT '',
+    s49 sys.NVARCHAR DEFAULT '',
+    s50 sys.NVARCHAR DEFAULT '',
+    s51 sys.NVARCHAR DEFAULT '',
+    s52 sys.NVARCHAR DEFAULT '',
+    s53 sys.NVARCHAR DEFAULT '',
+    s54 sys.NVARCHAR DEFAULT '',
+    s55 sys.NVARCHAR DEFAULT '',
+    s56 sys.NVARCHAR DEFAULT '',
+    s57 sys.NVARCHAR DEFAULT '',
+    s58 sys.NVARCHAR DEFAULT '',
+    s59 sys.NVARCHAR DEFAULT '',
+    s60 sys.NVARCHAR DEFAULT '',
+    s61 sys.NVARCHAR DEFAULT '',
+    s62 sys.NVARCHAR DEFAULT '',
+    s63 sys.NVARCHAR DEFAULT '',
+    s64 sys.NVARCHAR DEFAULT '',
+    s65 sys.NVARCHAR DEFAULT '',
+    s66 sys.NVARCHAR DEFAULT '',
+    s67 sys.NVARCHAR DEFAULT '',
+    s68 sys.NVARCHAR DEFAULT '',
+    s69 sys.NVARCHAR DEFAULT '',
+    s70 sys.NVARCHAR DEFAULT '',
+    s71 sys.NVARCHAR DEFAULT '',
+    s72 sys.NVARCHAR DEFAULT '',
+    s73 sys.NVARCHAR DEFAULT '',
+    s74 sys.NVARCHAR DEFAULT '',
+    s75 sys.NVARCHAR DEFAULT '',
+    s76 sys.NVARCHAR DEFAULT '',
+    s77 sys.NVARCHAR DEFAULT '',
+    s78 sys.NVARCHAR DEFAULT '',
+    s79 sys.NVARCHAR DEFAULT '',
+    s80 sys.NVARCHAR DEFAULT '',
+    s81 sys.NVARCHAR DEFAULT '',
+    s82 sys.NVARCHAR DEFAULT '',
+    s83 sys.NVARCHAR DEFAULT '',
+    s84 sys.NVARCHAR DEFAULT '',
+    s85 sys.NVARCHAR DEFAULT '',
+    s86 sys.NVARCHAR DEFAULT '',
+    s87 sys.NVARCHAR DEFAULT '',
+    s88 sys.NVARCHAR DEFAULT '',
+    s89 sys.NVARCHAR DEFAULT '',
+    s90 sys.NVARCHAR DEFAULT '',
+    s91 sys.NVARCHAR DEFAULT '',
+    s92 sys.NVARCHAR DEFAULT '',
+    s93 sys.NVARCHAR DEFAULT '',
+    s94 sys.NVARCHAR DEFAULT '',
+    s95 sys.NVARCHAR DEFAULT '',
+    s96 sys.NVARCHAR DEFAULT '',
+    s97 sys.NVARCHAR DEFAULT '',
+    s98 sys.NVARCHAR DEFAULT '',
+    s99 sys.NVARCHAR DEFAULT '',
+    s100 sys.NVARCHAR DEFAULT ''
+) RETURNS sys.NVARCHAR AS
+$BODY$
+SELECT
+    COALESCE(s1, '') ||
+    COALESCE(s2, '') ||
+    COALESCE(s3, '') ||
+    COALESCE(s4, '') ||
+    COALESCE(s5, '') ||
+    COALESCE(s6, '') ||
+    COALESCE(s7, '') ||
+    COALESCE(s8, '') ||
+    COALESCE(s9, '') ||
+    COALESCE(s10, '') ||
+    COALESCE(s11, '') ||
+    COALESCE(s12, '') ||
+    COALESCE(s13, '') ||
+    COALESCE(s14, '') ||
+    COALESCE(s15, '') ||
+    COALESCE(s16, '') ||
+    COALESCE(s17, '') ||
+    COALESCE(s18, '') ||
+    COALESCE(s19, '') ||
+    COALESCE(s20, '') ||
+    COALESCE(s21, '') ||
+    COALESCE(s22, '') ||
+    COALESCE(s23, '') ||
+    COALESCE(s24, '') ||
+    COALESCE(s25, '') ||
+    COALESCE(s26, '') ||
+    COALESCE(s27, '') ||
+    COALESCE(s28, '') ||
+    COALESCE(s29, '') ||
+    COALESCE(s30, '') ||
+    COALESCE(s31, '') ||
+    COALESCE(s32, '') ||
+    COALESCE(s33, '') ||
+    COALESCE(s34, '') ||
+    COALESCE(s35, '') ||
+    COALESCE(s36, '') ||
+    COALESCE(s37, '') ||
+    COALESCE(s38, '') ||
+    COALESCE(s39, '') ||
+    COALESCE(s40, '') ||
+    COALESCE(s41, '') ||
+    COALESCE(s42, '') ||
+    COALESCE(s43, '') ||
+    COALESCE(s44, '') ||
+    COALESCE(s45, '') ||
+    COALESCE(s46, '') ||
+    COALESCE(s47, '') ||
+    COALESCE(s48, '') ||
+    COALESCE(s49, '') ||
+    COALESCE(s50, '') ||
+    COALESCE(s51, '') ||
+    COALESCE(s52, '') ||
+    COALESCE(s53, '') ||
+    COALESCE(s54, '') ||
+    COALESCE(s55, '') ||
+    COALESCE(s56, '') ||
+    COALESCE(s57, '') ||
+    COALESCE(s58, '') ||
+    COALESCE(s59, '') ||
+    COALESCE(s60, '') ||
+    COALESCE(s61, '') ||
+    COALESCE(s62, '') ||
+    COALESCE(s63, '') ||
+    COALESCE(s64, '') ||
+    COALESCE(s65, '') ||
+    COALESCE(s66, '') ||
+    COALESCE(s67, '') ||
+    COALESCE(s68, '') ||
+    COALESCE(s69, '') ||
+    COALESCE(s70, '') ||
+    COALESCE(s71, '') ||
+    COALESCE(s72, '') ||
+    COALESCE(s73, '') ||
+    COALESCE(s74, '') ||
+    COALESCE(s75, '') ||
+    COALESCE(s76, '') ||
+    COALESCE(s77, '') ||
+    COALESCE(s78, '') ||
+    COALESCE(s79, '') ||
+    COALESCE(s80, '') ||
+    COALESCE(s81, '') ||
+    COALESCE(s82, '') ||
+    COALESCE(s83, '') ||
+    COALESCE(s84, '') ||
+    COALESCE(s85, '') ||
+    COALESCE(s86, '') ||
+    COALESCE(s87, '') ||
+    COALESCE(s88, '') ||
+    COALESCE(s89, '') ||
+    COALESCE(s90, '') ||
+    COALESCE(s91, '') ||
+    COALESCE(s92, '') ||
+    COALESCE(s93, '') ||
+    COALESCE(s94, '') ||
+    COALESCE(s95, '') ||
+    COALESCE(s96, '') ||
+    COALESCE(s97, '') ||
+    COALESCE(s98, '') ||
+    COALESCE(s99, '') ||
+    COALESCE(s100, '');
+$BODY$
+CALLED ON NULL INPUT
+LANGUAGE SQL IMMUTABLE PARALLEL SAFE;
+GRANT EXECUTE ON FUNCTION sys.concat(
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR,
+    sys.NVARCHAR
+) TO PUBLIC;
